@@ -11,12 +11,12 @@ const MannualHeader = () => {
     isWeb3EnableLoading,
   } = useMoralis();
 
-  useEffect(async () => {
+  useEffect(() => {
     if (isWeb3Enabled) return;
 
     if (typeof window != undefined) {
       if (window.localStorage.getItem("connected")) {
-        await enableWeb3();
+        enableWeb3();
       }
     }
 
